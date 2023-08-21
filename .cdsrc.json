@@ -1,5 +1,9 @@
 {
-    "build": {
-        "target": "."
-    }
+  "build": {
+    "target": "."
+  },
+  "requires": {
+    "db": "hana",
+    "auth": "xsuaa"
+  }
 }
