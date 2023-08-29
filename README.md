@@ -26,6 +26,7 @@ check:
 > cf apps
 
 Adding DB:
+https://developers.sap.com/tutorials/hana-cloud-mission-trial-2.html
 > cds add hana
 change a service-plan for a trial account in the yaml file:
 ```yaml
@@ -37,4 +38,11 @@ resources:
       service-plan: hana
 ```
 
+For running locally:
+npm install hdb
+npm i @sap/xssec
+
+
+https://cap.cloud.sap/docs/get-started/
+https://medium.com/nerd-for-tech/sap-tutorial-complete-cap-java-part-1-fc1868c7bbba
 
