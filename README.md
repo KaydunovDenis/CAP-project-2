@@ -2,6 +2,7 @@
 CAP java project, MTA app, OData v4
 
 ### Running
+> mvn clean install
 > mvn spring-boot:run
 
 ---
@@ -38,10 +39,31 @@ resources:
       service-plan: hana
 ```
 
-For running locally:
-npm install hdb
-npm i @sap/xssec
+Run this to generate an initial set of empty .csv files with header lines based on your CDS model:
+> cds add data
 
+The power of CDS!
+>cds compile db/books.cds --to sql
+>cds compile db/books.cds --to json
+
+> npm add @cap-js/sqlite -D  
+or
+>npm add sqlite3 -D  
+> cds deploy --to sqlite //create db file with name db.sqlite
+
+
+```xml
+ <!-- https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc -->
+		<dependency>
+			<groupId>org.xerial</groupId>
+			<artifactId>sqlite-jdbc</artifactId>
+			<version>3.42.0.1</version>
+		</dependency>
+```
+
+
+Test data generation for CSV:
+[Homepage](https://plugins.jetbrains.com/plugin/16873-test-data)
 
 https://cap.cloud.sap/docs/get-started/
 https://medium.com/nerd-for-tech/sap-tutorial-complete-cap-java-part-1-fc1868c7bbba
