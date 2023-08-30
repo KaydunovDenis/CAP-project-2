@@ -1,5 +1,7 @@
-using my.bookshop as my from '../../db/data-model';
+using {toadslop.bookshop as bookshop} from '../../db/books';
 
+@path : 'browse'
 service CatalogService {
-    @readonly entity Books as projection on my.Books;
+    entity Books as projection on bookshop.Books;
+    entity Authors as projection on bookshop.Authors;
 }
