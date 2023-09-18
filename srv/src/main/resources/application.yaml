@@ -15,6 +15,14 @@ cds:
   odata-v4.endpoint.path: "/api"
   data-source:
       auto-config.enabled: true
+  security:
+    mock:
+      users:
+        - name: admin
+          password: admin
+          role: admin
+        - name: user
+          password: user
 
 server:
   port: 8080
