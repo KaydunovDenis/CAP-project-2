@@ -6,8 +6,7 @@ CAP java project, MTA app, OData v4
 > mvn spring-boot:run
 
 ---
-### Resources
-1. [Getting-started: OData](https://www.odata.org/getting-started/)
+
  
 
 ---
@@ -42,29 +41,34 @@ resources:
 Run this to generate an initial set of empty .csv files with header lines based on your CDS model:
 > cds add data
 
-The power of CDS!
+### Useful CDS commands:  
 >cds compile db/books.cds --to sql
 >cds compile db/books.cds --to json
 
-> npm add @cap-js/sqlite -D  
-or
+> npm add @cap-js/sqlite -D
+
+or  
 >npm add sqlite3 -D  
 > cds deploy --to sqlite //create db file with name db.sqlite
 
 
+### Dependency for SQLite
 ```xml
- <!-- https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc -->
-		<dependency>
-			<groupId>org.xerial</groupId>
-			<artifactId>sqlite-jdbc</artifactId>
-			<version>3.42.0.1</version>
-		</dependency>
+    <!-- https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc -->
+    <dependency>
+        <groupId>org.xerial</groupId>
+        <artifactId>sqlite-jdbc</artifactId>
+        <version>3.42.0.1</version>
+    </dependency>
 ```
 
 
-Test data generation for CSV:
-[Homepage](https://plugins.jetbrains.com/plugin/16873-test-data)
+### Resources
+1. [Getting-started: OData](https://www.odata.org/getting-started/)
+2. [Test data generation for CSV](https://plugins.jetbrains.com/plugin/16873-test-data)
+3. [CAP: get-started](https://cap.cloud.sap/docs/get-started/)
+4. [CAP Java + Fiori elements](https://medium.com/nerd-for-tech/sap-tutorial-complete-cap-java-part-1-fc1868c7bbba)
+5. [CAP Java + Fiori elements](https://medium.com/nerd-for-tech/sap-tutorial-complete-cap-java-part-5-fb3ff81e64c1)
+6. [Postman collection for testing](https://api.postman.com/collections/18168968-5d01b98d-0f03-4780-9a14-0345ec84cee9?access_key=PMAT-01HAMAV64PJN570KF6W5SCSXMT)
 
-https://cap.cloud.sap/docs/get-started/
-https://medium.com/nerd-for-tech/sap-tutorial-complete-cap-java-part-1-fc1868c7bbba
-
+  
